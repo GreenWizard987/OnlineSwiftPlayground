@@ -2,11 +2,12 @@
 import PackageDescription
 
 let dependencies:[Package.Dependency] = [
-    .package(url: "https://github.com/krzyzanowskim/CryptoSwift.git", .exact("0.10.0"))
+    .package(url: "https://github.com/ReactiveX/RxSwift.git", from: "4.0.0")
+    .package(url: "https://github.com/Alamofire/Alamofire.git", from: "4.0.0"))
 ]
 
 var targets:[Target] = [
-    .target(name: "OnlinePlayground", dependencies: ["CryptoSwift"]), // Link custom modules here
+    .target(name: "OnlinePlayground", dependencies: ["RxSwift", "Alamofire"]), // Link custom modules here
 ]
 
 var products: [Product] = [
